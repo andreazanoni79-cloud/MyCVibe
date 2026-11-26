@@ -1,6 +1,15 @@
 import { tweetsData } from './data.js'
 
+const contactBtn = document.getElementById('contact-btn')
+const contactForm = document.getElementById('contact-form')
 
+contactBtn.addEventListener('click', function () {
+    contactForm.classList.toggle('hidden')
+
+    const isVisible = !contactForm.classList.contains('hidden')
+    contactBtn.setAttribute('aria-expanded', isVisible)
+    contactBtn.textContent = isVisible ? 'Cerrar formulario' : 'Contactar'
+})
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
