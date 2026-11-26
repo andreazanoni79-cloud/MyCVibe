@@ -4,7 +4,7 @@ export const tweetsData = [
         profilePic: `images/AndreaZ.png`,
         likes: 27,
         retweets: 10,
-        tweetText: `Soy Andrea Zanoni, estudiante de ASIR y desarrollador frontend en formación. Mi trayectoria combina una variedad de experiencias. He sido emprendedor, osteopata y fotografo; actualmente estoy ampliando mis conocimientos en desarrollo web, administración de redes y sistemas, y ciberseguridad.`,
+        tweetText: `Me llamo Andrea Zanoni, estudiante de ASIR y desarrollador frontend en formación. Mi trayectoria combina una variedad de experiencias. He sido emprendedor, osteopata y fotografo; actualmente estoy ampliando mis conocimientos en desarrollo web, administración de redes y sistemas, y ciberseguridad.`,
         replies: [],
         isLiked: false,
         isRetweeted: false,

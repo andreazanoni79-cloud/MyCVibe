@@ -3,13 +3,14 @@ import { tweetsData } from './data.js'
 const contactBtn = document.getElementById('contact-btn')
 const contactForm = document.getElementById('contact-form')
 
-contactBtn.addEventListener('click', function () {
+function handleContactBtnClick(){
     contactForm.classList.toggle('hidden')
 
     const isVisible = !contactForm.classList.contains('hidden')
     contactBtn.setAttribute('aria-expanded', isVisible)
     contactBtn.textContent = isVisible ? 'Cerrar formulario' : 'Contactar'
-})
+}
+
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
@@ -20,8 +21,8 @@ document.addEventListener('click', function(e){
     else if(e.target.dataset.reply){
         handleReplyClick(e.target.dataset.reply)
     }
-    else if(e.target.id === 'tweet-btn'){
-        handleTweetBtnClick()
+    else if(e.target.id === 'contact-btn'|| e.target.id === 'close-contact'){
+        handleContactBtnClick()
     }
 })
  
@@ -59,26 +60,6 @@ function handleReplyClick(replyId){
     document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
 }
 
-function handleTweetBtnClick(){
-    const tweetInput = document.getElementById('tweet-input')
-
-    if(tweetInput.value){
-        tweetsData.unshift({
-            handle: `@Scrimba`,
-            profilePic: `images/scrimbalogo.png`,
-            likes: 0,
-            retweets: 0,
-            tweetText: tweetInput.value,
-            replies: [],
-            isLiked: false,
-            isRetweeted: false,
-            uuid: crypto.randomUUID()
-        })
-    render()
-    tweetInput.value = ''
-    }
-
-}
 
 function getFeedHtml(){
     let feedHtml = ``

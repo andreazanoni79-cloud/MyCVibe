@@ -20,10 +20,41 @@
 			<img src="\images\AndreaZ.png" class="profile-pic">
 			<textarea placeholder="Quieres contactar?" id="tweet-input"></textarea>
 		</div>
-		<button id="tweet-btn">Contactar</button>
-		<div class="feed" id="feed">
+		<button id="contact-btn" type="button" aria-expanded="false">
+  Contactar
+</button>
+
+<div id="contact-form" class="contact-overlay hidden">
+  <section class="contact-card">
+	<button id="close-contact" class="close-contact" type="button" aria-label="Cerrar formulario">
+ 	 &times;
+	</button>
+    <h2>Envíame un mensaje</h2>
+
+    <form name="contacto" method="POST" data-netlify="true">
+      <label>
+        Tu nombre
+        <input type="text" name="nombre" required>
+      </label>
+
+      <label>
+        Tu correo electrónico
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Mensaje
+        <textarea name="mensaje" required></textarea>
+      </label>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+</div>
+
+<div id="feed"></div>
 			<!-- Tweets here!! -->
-		</div>
+		
 	</main>
 	<script src="index.js" type="module"></script>
 </body>

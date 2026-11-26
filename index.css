@@ -136,3 +136,69 @@ button{
 .hidden{
     display: none;
 }
+
+/* formulario */
+
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgb(0 0 0 / 45%);
+}
+
+.contact-overlay.hidden {
+  display: none;
+}
+
+.contact-card {
+  position: relative;
+  width: min(100%, 460px);
+  padding: 2rem;
+  border-radius: 16px;
+  background: white;
+  color: #0f1419;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 25%);
+}
+
+.contact-card h2 {
+  color: #1d9bf0;
+}
+
+.contact-card label {
+  display: block;
+  margin: 1rem 0;
+}
+
+.contact-card input,
+.contact-card textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.7rem;
+  border: 1px solid #cce7f7;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.contact-card textarea {
+  min-height: 120px;
+}
+
+.close-contact {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width:auto;
+  padding: 0;
+  border: none;
+  left: auto;
+  background: transparent;
+  color: #536471;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
